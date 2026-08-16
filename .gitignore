@@ -5,3 +5,5 @@ app/dist/
 app/.astro/
 workspace/target/
 workspace/**/target/
+.superpowers/
+docs/
