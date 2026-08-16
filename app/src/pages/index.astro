@@ -1,8 +1,8 @@
 ---
 const services = [
-  { name: 'PostgreSQL', endpoint: import.meta.env.DATABASE_URL ? 'postgres:5432' : 'not configured' },
-  { name: 'RustFS S3', endpoint: import.meta.env.S3_ENDPOINT ?? 'not configured' },
-  { name: 'RustFS bucket', endpoint: import.meta.env.S3_BUCKET ?? 'not configured' },
+  { name: 'PostgreSQL', endpoint: process.env.DATABASE_URL ? 'postgres:5432' : 'not configured' },
+  { name: 'RustFS S3', endpoint: process.env.S3_ENDPOINT ?? 'not configured' },
+  { name: 'RustFS bucket', endpoint: process.env.S3_BUCKET ?? 'not configured' },
 ];
 ---
 

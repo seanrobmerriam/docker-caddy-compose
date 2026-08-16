@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "test:runtime-env": "./scripts/test-runtime-env.sh",
     "preview": "astro preview",
     "astro": "astro"
   },
