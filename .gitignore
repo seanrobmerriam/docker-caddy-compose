@@ -1,0 +1,7 @@
+.env
+.pnpm-store/
+app/node_modules/
+app/dist/
+app/.astro/
+workspace/target/
+workspace/**/target/

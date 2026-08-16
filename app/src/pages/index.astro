@@ -1,0 +1,23 @@
+---
+const services = [
+  { name: 'PostgreSQL', endpoint: import.meta.env.DATABASE_URL ? 'postgres:5432' : 'not configured' },
+  { name: 'RustFS S3', endpoint: import.meta.env.S3_ENDPOINT ?? 'not configured' },
+  { name: 'RustFS bucket', endpoint: import.meta.env.S3_BUCKET ?? 'not configured' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro Docker Stack</title>
+  </head>
+  <body>
+    <main>
+      <p>Astro SSR</p>
+      <h1>The stack is running.</h1>
+      <ul>{services.map(({ name, endpoint }) => <li><strong>{name}:</strong> {endpoint}</li>)}</ul>
+    </main>
+  </body>
+</html>
