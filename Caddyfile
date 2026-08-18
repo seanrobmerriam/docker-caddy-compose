@@ -1,9 +1,22 @@
 {
-	auto_https off
 	admin off
 }
 
-:80 {
+recover.works, www.recover.works, app.recover.works {
 	encode zstd gzip
 	reverse_proxy astro:4321
+}
+
+next.recover.works {
+	encode zstd gzip
+	reverse_proxy next:3000
+}
+
+s3.recover.works {
+	reverse_proxy rustfs:9000
+}
+
+s3-admin.recover.works {
+	encode zstd gzip
+	reverse_proxy rustfs:9001
 }

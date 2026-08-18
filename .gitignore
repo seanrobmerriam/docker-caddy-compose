@@ -1,4 +1,5 @@
 .env
+.DS_Store
 .pnpm-store/
 app/node_modules/
 app/dist/
